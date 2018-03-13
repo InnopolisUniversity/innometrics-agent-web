@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../kango-ui/kango_api.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="col-md-12 mt-2 mb-2">
+    <p class="h5 text-center">Innometrics Tracker</p>
+</div>
+<div class="container js-navigation-window" id="main-window">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <label class="switch align-middle">
+                    <input type="checkbox" id="data-collection">
+                    <span class="slider round"></span>
+                </label>
+                <span class="align-middle d-inline-block">Data collection</span>
+            </div>
+            <div class="col-sm text-right">
+                <div class="btn btn-primary" id="send-activities">Send activities</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ul class="list-unstyled float-left">
+            <li><a href="#settings" class="js-navigation-link btn btn-light" id="settings">Settings</a></li>
+        </ul>
+        <a class="float-right btn btn-link" href="#logout" id="logout">Sign out</a>
+    </div>
+</div>
+<div class="container js-navigation-window" id="settings-window" style="display: none">
+    <p class="h6 text-center">Settings</p>
+    <table class="table table-hover">
+        <tbody>
+        <tr>
+            <td class="align-middle">
+                <label class="mb-0" for="server-address">Server address:</label>
+            </td>
+            <td class="align-middle">
+                <input class="form-control" type="text" id="server-address" name="server-address">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <a href="#main" class="js-navigation-link btn btn-link float-left mb-3" id="main">Back</a>
+        <a href="#save" class="js-navigation-link btn btn-primary float-right mb-3" id="save-settings">Save</a>
+    </div>
+</div>
+</div>
+<div class="container js-navigation-window" id="login-window" style="display: none">
+    <form class="form-login" id="login-form">
+        <p class="h6 text-center">Please sign in</p>
+        <input class="form-control" type="text" placeholder="Enter E-mail" name="username" id="username">
+        <input class="form-control" type="password" placeholder="Enter Password" name="password" id="password">
+        <input class="btn btn-lg btn-primary btn-block mt-3 mb-3" type="submit" value="Login"/>
+    </form>
+</div>
+</body>
+</html>

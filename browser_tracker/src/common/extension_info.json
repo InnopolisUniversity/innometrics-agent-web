@@ -13,5 +13,8 @@
         "tooltipText": "Kango"
     }, 
     "name": "browser_tracker",
-    "options_page": "options.html"
+    "options_page": "options.html",
+    "permissions": {
+        "cookies": false
+    }
 }
